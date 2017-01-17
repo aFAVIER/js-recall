@@ -213,7 +213,21 @@ var numberOfPalindromes = function(array) {
 }
 
 var shortestWord = function(array) {
-    return 'Write your method here';
+    //calcul longueur de chaque mot
+    //compare les longueurs
+    //return
+    var word='';
+    var tab = array[0];
+    for (i = 1; i <= array.length-1; i++) {
+        word='';
+        if (array[i].length<tab[0].length) {
+            word.push(array[i]);
+            
+        }
+        tab.push(word);
+        
+    }
+    return tab[0];
 }
 
 var longestWord = function(array) {
