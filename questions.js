@@ -158,7 +158,7 @@ var getFirstHalf = function(string) {
     //return string==> pour voir le mot
     //calcul de la longueur du mot
     //divise pas 2 la longueur
-    //affiche le nombre d'index calculé juste avant
+    //affiche le nombre d'index calculé de "string" juste avant
 
     var word='';
     var demi='';
@@ -170,7 +170,15 @@ var getFirstHalf = function(string) {
 }
 
 var makeNegative = function(number) {
-    return 'Write your method here';
+    //return number ==> nombre positif
+    //Math.sign() ==> -1
+    // -1*5 ? // 0-5-5 ? // 5-5*2 ?
+    var nb;
+    var moins='-';
+    //nb=parseInt(number-number*2);
+    nb=Math.sign(0-number)*number; // nb = -1 x 5
+    //nb=Math.sign(nb)-number+1;
+    return nb;
 }
 
 var numberOfPalindromes = function(array) {
