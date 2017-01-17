@@ -182,7 +182,34 @@ var makeNegative = function(number) {
 }
 
 var numberOfPalindromes = function(array) {
-    return 'Write your method here';
+    //Palindrome = se lit de droite a gauche ou gauche a droite
+    //inverser les lettres
+    //vérifier si inverse = normal
+    //mettre dans un tableau
+    //compter le nombre d'entrés
+    //afficher 
+    var tab = array;
+    var word = '';
+    var palindrome = new Array;
+    var count = new Array;
+
+//inversement des lettres
+    for (i = 0; i < array.length; i++) {
+        word='';
+        for (var j = array[i].length-1; j >= 0; j--) {
+            word+=array[i][j];
+        }
+//nouveau tableau avec lettres inversées
+        palindrome.push(word);
+    }
+//vérifie chaque entré des 2 tableaux si elles sont strictement =
+    for (x = 0; x < tab.length; x++) {
+        if (palindrome[x]==tab[x]) {
+            count.push(tab[x]);
+        }
+    }
+
+    return count.length; //retour de la longueur du tableau
 }
 
 var shortestWord = function(array) {
