@@ -221,10 +221,10 @@ var shortestWord = function(array) {
     for (i = 1; i <= array.length-1; i++) {
         word='';
         if (array[i].length<tab[0].length) {
-            word.push(array[i]);
+            word=array[i];
             
         }
-        tab.push(word);
+        tab[0]=word;
         
     }
     return tab[0];
